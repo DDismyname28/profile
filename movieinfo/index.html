@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Movie Media</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="search">
+        <h3>Search Movies</h3>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="Search Movie"
+                name="search"
+              />
+            </div>
+            <button type="button" id="searchbtn" class="btn btn-default mb-3">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="film_roll"></div>
+
+      <div class="row" id="content"></div>
+      <div class="row">
+        <div class="col-sm-12" id="spin"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/filmroll.js"></script>
+    <script src="js/touchswipe.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      $(function () {
+        console.log("hello");
+        let URL = "https://www.omdbapi.com/?apikey=36b2ea25&s=spider";
+        $.ajax({
+          type: "POST",
+          url: URL,
+          dataType: "json",
+          success: (movies) => {
+            if (movies.Response == "False") {
+              output = '<div class="col-12"><p>No Results Found!</p></div>';
+              $("#film_roll").html(output);
+            } else {
+              let movies1 = movies.Search;
+              let output = "";
+              //output += '<div class="row">';
+              $.each(movies1, (index, movie) => {
+                if (movie.Poster == "N/A" || movie.Poster == "") {
+                  movie.Poster = "images/NA.gif";
+                }
+                output +=
+                  '<div class="col-sm-2"><a href="#" onclick="return view(\'' +
+                  movie.imdbID +
+                  '\')"><img  src="' +
+                  movie.Poster +
+                  '" alt="" class="img-fluid"></a></div>';
+              });
+              //output += '</div><';
+              $("#film_roll").html(output);
+              //$(window).on('load', function(){
+              fr = new FilmRoll({
+                container: "#film_roll",
+                configure_load: true,
+              });
+              //});
+            }
+          },
+        }).catch((err) => {
+          console.log(err);
+        });
+      });
+    </script>
+  </body>
+</html>

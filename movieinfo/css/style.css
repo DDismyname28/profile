@@ -1,0 +1,138 @@
+body {
+	background: #116322;
+}
+.container {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background: #116322;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	padding: 10px;
+}
+.search, #content p {
+	padding: 6px;
+	color: #fff;
+}
+.img-fluid {
+	border: 1px solid #000;
+	height: 100%;
+	width: 100%;
+}
+#content-box {
+	padding: 5px;
+	text-align: center;
+	transition: all 0.5s ease;
+}
+#content-box h6 {
+	padding: 5px;
+}
+#content-box:hover {
+	margin-top: -10px;
+}
+.thumbnail {
+	height: ;
+}
+.film_roll_shuttle {
+	top: 30px!important;
+}
+.film_roll_child {
+	transition: all 0.5s ease;
+}
+.film_roll_child img {
+	
+}
+.film_roll_child.active {
+	margin-top: -30px;
+	-ms-transform: rotate(15deg); /* IE 9 */
+  -webkit-transform: rotate(15deg); /* Safari prior 9.0 */
+  transform: rotate(15deg); /* Standard syntax */
+}
+#result-section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+/* movie.html */
+#movie-info {
+	padding: 30px;
+}
+#movie-info img {
+	border: 5px solid #fff;
+}
+li span {
+	font-weight: bolder;
+
+}
+ul {
+	margin-top: 20px;
+}
+.list-group-item {
+	background: #116322;
+
+}
+a {
+	color: #fff;
+}
+a:hover {
+	color: #0c2912;
+	text-decoration: none;
+}
+.back {
+	background: #0e8427;
+	border: 1px solid #116322;
+}
+.back:hover {
+	background: #1d7730;
+	border: 1px solid #116322;
+}
+.spinner:before {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	border-radius: 50%;
+	z-index: 1000000000000000000000000000;
+	border: 5px solid #fff;
+	border-bottom: 5px solid #333399;
+	animation: spinner 2s linear infinite;
+}
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);	
+	}
+}
+
+
+.spinnerOverlay {
+	width: 100%;
+	min-height: 100%;
+	background: rgba(117, 184, 132,0.5);
+	z-index: 1000000000000000000000000000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+}
+/* media queries */
+
+@media screen and (min-width: 590px) {
+
+	.thumbnail {
+		height: ;
+		width: 100%;
+	}
+	
+}
+@media screen and (max-width: 589px) {
+	.search {
+		text-align: center;
+	}
+}
+
+
