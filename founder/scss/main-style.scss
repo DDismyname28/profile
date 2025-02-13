@@ -1,906 +1,904 @@
-$CFAstyStd-bold-font: 'CFAstyStd-Bold', sans-serif;
-$CFAstyStd-book-font: 'CFAstyStd-Book', sans-serif;
-$FontAwesome: 'FontAwesome', sans-serif;
-$HelveticaNeueCondensedBold: 'HelveticaNeueCondensedBold', sans-serif;
-$Miller-Display-Regular: 'Miller-Display-Regular', sans-serif;
-$highlight-font : #2cecb4;
+$CFAstyStd-bold-font: "CFAstyStd-Bold", sans-serif;
+$CFAstyStd-book-font: "CFAstyStd-Book", sans-serif;
+$FontAwesome: "FontAwesome", sans-serif;
+$HelveticaNeueCondensedBold: "HelveticaNeueCondensedBold", sans-serif;
+$Miller-Display-Regular: "Miller-Display-Regular", sans-serif;
+$highlight-font: #2cecb4;
 
 @mixin form-style {
-	input, button {
-			width: 100%;
-			border-radius: 0;
-			border: 2px solid #fff;
-			background: rgba(177, 177, 183,.5);
-			font-family: $HelveticaNeueCondensedBold;
-			margin: 40px 0;
-			/*text-transform: uppercase;*/
-			color: #1d1e31;
-			&::placeholder {
-				color: #1d1e31;
-				text-transform: uppercase;
-			}
-			&:focus {
-				outline: none;
-  				box-shadow: none;
-  				text-transform: uppercase;
-			}
-			&:active {
-				outline: none;
-  				box-shadow: none;
-			}
-		}
-		button {
-			background: $highlight-font;
-			color: #1d1e31;
-			border: none;
-			border-radius: 22px;
-		}
+  input,
+  button {
+    width: 100%;
+    border-radius: 0;
+    border: 2px solid #fff;
+    background: rgba(177, 177, 183, 0.5);
+    font-family: $HelveticaNeueCondensedBold;
+    margin: 40px 0;
+    /*text-transform: uppercase;*/
+    color: #1d1e31;
+    &::placeholder {
+      color: #1d1e31;
+      text-transform: uppercase;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      text-transform: uppercase;
+    }
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  button {
+    background: $highlight-font;
+    color: #1d1e31;
+    border: none;
+    border-radius: 22px;
+  }
 }
 
 @font-face {
-    font-family: 'CFAstyStd-Bold';
-    src: url("../fonts/CFAstyStd-Bold.otf") format("opentype");
+  font-family: "CFAstyStd-Bold";
+  src: url("../fonts/CFAstyStd-Bold.otf") format("opentype");
 }
 @font-face {
-    font-family: 'CFAstyStd-Book';
-    src: url("../fonts/CFAstyStd-Book.otf") format("opentype");
+  font-family: "CFAstyStd-Book";
+  src: url("../fonts/CFAstyStd-Book.otf") format("opentype");
 }
 @font-face {
-    font-family: 'FontAwesome';
-    src: url("../fonts/FontAwesome.otf") format("opentype");
+  font-family: "FontAwesome";
+  src: url("../fonts/FontAwesome.otf") format("opentype");
 }
 @font-face {
-    font-family: 'HelveticaNeueCondensedBold';
-    src: url("../fonts/HelveticaNeueCondensedBold.ttf") format("truetype");
+  font-family: "HelveticaNeueCondensedBold";
+  src: url("../fonts/HelveticaNeueCondensedBold.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Miller-Display-Regular';
-    src: url("../fonts/Miller-Display-Regular.otf") format("opentype");
+  font-family: "Miller-Display-Regular";
+  src: url("../fonts/Miller-Display-Regular.otf") format("opentype");
 }
 body {
-	background: #efebed;
-	color: #1d1e31;
+  background: #efebed;
+  color: #1d1e31;
 }
 header {
-	background-image: url('../images/hero-foto-dektop.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	min-height: 700px;
-	color: #fff;
-	.brand {
-			font-family: $CFAstyStd-bold-font;
-			text-align: center;
-			font-size: 30px;
-			padding: 20px;
-			text-decoration: none;
-			color: #fff;
-			a span {
-			color: $highlight-font;
-		}
-	}
-	
-	.hero-text {
-		color: #fff;
-		p {
-			font-family: $Miller-Display-Regular;
-			font-size: 17px;
-			text-align: center;
-			span {
-				font-family: $HelveticaNeueCondensedBold;
-				font-size: 14px;
-				text-transform: uppercase;
-				border-bottom: 2px solid #c4c5c9;
-				padding: 2px 0;
-				position: relative;
-				&::after {
-					left: -20px;
-				    border-top: 7px solid transparent;
-					border-bottom: 7px solid transparent;
-					border-left: 13px solid blue;
-				    content: " ";
-				    height: 0;
-				    width: 0;
-				    position: absolute;
-				    pointer-events: none;
-				    border-left-color: $highlight-font;
-				    bottom: 9%;
-				}
-				&:hover {
-					color: #919296;
-					cursor: pointer;
-				}
-			}
-		}
-		h1 {
-			font-family: $HelveticaNeueCondensedBold;
-			font-size: 60px;
-			text-align: center;
-			text-transform: uppercase;
-			padding: 30px 0 8px;
-			span {
-				color: $highlight-font;
-			}
-		}
-	}
-	#header-form {
-		@include form-style;
-	}
-	p.detail {
-		font-family: $HelveticaNeueCondensedBold;
-		text-align: center;
-		margin: 0 auto;
-		margin-top: 70px;
-		text-transform: uppercase;
-		span {
-			color: $highlight-font;
-		}
-	}
+  background-image: url("../images/hero-foto-dektop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 700px;
+  color: #fff;
+  .brand {
+    font-family: $CFAstyStd-bold-font;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    a span {
+      color: $highlight-font;
+    }
+  }
+
+  .hero-text {
+    color: #fff;
+    p {
+      font-family: $Miller-Display-Regular;
+      font-size: 17px;
+      text-align: center;
+      span {
+        font-family: $HelveticaNeueCondensedBold;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #c4c5c9;
+        padding: 2px 0;
+        position: relative;
+        &::after {
+          left: -20px;
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left: 13px solid blue;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-left-color: $highlight-font;
+          bottom: 9%;
+        }
+        &:hover {
+          color: #919296;
+          cursor: pointer;
+        }
+      }
+    }
+    h1 {
+      font-family: $HelveticaNeueCondensedBold;
+      font-size: 60px;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 30px 0 8px;
+      span {
+        color: $highlight-font;
+      }
+    }
+  }
+  #header-form {
+    @include form-style;
+  }
+  p.detail {
+    font-family: $HelveticaNeueCondensedBold;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-transform: uppercase;
+    span {
+      color: $highlight-font;
+    }
+  }
 }
 #sec_1 {
-	margin: 100px 0;
-	.video1 {
-		position: relative;
-		.video-title {
-			position: absolute;
-			top: -7%;
-			left: -5px;
-			font-family: $CFAstyStd-bold-font;
-			color: #fff;
-			text-align: center;
-			font-size: 18px;
-			z-index: 100;
-			background: #1d1e31;
-			padding: 10px 25px;
-			transform: skew(-37deg);
-			p {
-				margin: 0;
-				transform: skew(37deg);
-			}
-			span {
-				color: $highlight-font;
-				transform: skew(37deg);
-			}
-		}
-	}
-	.video-image {
-		position: relative;
-		cursor: pointer;
-		margin-bottom: 60px;
-		z-inde
-		&:hover {
-			&:after {
-				background-color: rgba(255, 255, 255, 1);
-			}
-		}
-		&::before {
-			content: "\f04b";
-  			font-family: $FontAwesome;
-  			position: absolute;
-  			
-  			color: $highlight-font;
-  			font-size: 40px;
-  			z-index: 100;
-  			cursor: pointer;
-			left: 50%;
-			margin-left: -10px;
-			top: 50%;
-			margin-top: -30px
-		}
-		&::after {
-			content: '';
-			position: absolute;
-		    top: 50%;
-    		left: 50%;
-		    width: 90px;
-		    height: 90px;
-			margin-left: -45px;
-			margin-top: -45px;
-		    border-radius: 50%;
-		    background-color: rgba(255, 255, 255, 0.85);
-		    cursor: pointer;
-		}
-		
-		img {
-			border-bottom: 10px solid $highlight-font;
-		}
-		span {
-			
-		}
-	}
-	#lessons-content .col-sm-6 {
-		&:first-child {
-			border-right: 2px solid #fff;
-		}
-		.lessons {
-			text-align: center;
-			padding: 0 5px;
-			p {
-				font-family: $CFAstyStd-book-font;
-				font-size: 15px;
-			}
-			span.icon-title {
-				font-family: $HelveticaNeueCondensedBold;
-				display: block;
-				padding-top: 10px;
-				text-transform: uppercase;
-			}
-		}
-	}
-	.video-series {
-		font-family: $HelveticaNeueCondensedBold;
-		font-size: 15px; 
-		padding: 0 30px;
-		h2 {
-			font-size: 40px;
-			text-transform: uppercase;
-			span {
-				display: block;
-			}
-		}
-		p {
-			text-transform: uppercase;
-			font-size: 15px;
-		}
-		ul {
-			font-family: $CFAstyStd-book-font;
-			padding-left: 0;
-			li {
-				padding: 10px 25px;
-				list-style: none;
-				position: relative;
-				&::before {
-					content: "\2022";
-					padding-right: 10px;
-					color: $highlight-font;
-					font-size: 30px;
-					position: absolute;
-					top: 0;
-					left: 0;
-				}
-			}
-		}
-	}
+  margin: 100px 0;
+  .video1 {
+    position: relative;
+    .video-title {
+      position: absolute;
+      top: -7%;
+      left: -5px;
+      font-family: $CFAstyStd-bold-font;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      z-index: 100;
+      background: #1d1e31;
+      padding: 10px 25px;
+      transform: skew(-37deg);
+      p {
+        margin: 0;
+        transform: skew(37deg);
+      }
+      span {
+        color: $highlight-font;
+        transform: skew(37deg);
+      }
+    }
+  }
+  .video-image {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 60px;
+    z-inde &:hover {
+      &:after {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+    &::before {
+      content: "\f04b";
+      font-family: $FontAwesome;
+      position: absolute;
+
+      color: $highlight-font;
+      font-size: 40px;
+      z-index: 100;
+      cursor: pointer;
+      left: 50%;
+      margin-left: -10px;
+      top: 50%;
+      margin-top: -30px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90px;
+      height: 90px;
+      margin-left: -45px;
+      margin-top: -45px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.85);
+      cursor: pointer;
+    }
+
+    img {
+      border-bottom: 10px solid $highlight-font;
+    }
+    span {
+    }
+  }
+  #lessons-content .col-sm-6 {
+    &:first-child {
+      border-right: 2px solid #fff;
+    }
+    .lessons {
+      text-align: center;
+      padding: 0 5px;
+      p {
+        font-family: $CFAstyStd-book-font;
+        font-size: 15px;
+      }
+      span.icon-title {
+        font-family: $HelveticaNeueCondensedBold;
+        display: block;
+        padding-top: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .video-series {
+    font-family: $HelveticaNeueCondensedBold;
+    font-size: 15px;
+    padding: 0 30px;
+    h2 {
+      font-size: 40px;
+      text-transform: uppercase;
+      span {
+        display: block;
+      }
+    }
+    p {
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+    ul {
+      font-family: $CFAstyStd-book-font;
+      padding-left: 0;
+      li {
+        padding: 10px 25px;
+        list-style: none;
+        position: relative;
+        &::before {
+          content: "\2022";
+          padding-right: 10px;
+          color: $highlight-font;
+          font-size: 30px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
 }
 #sec_2 {
-		position: relative;
-		min-height: 55vw;
-		&::before {
-		content: '';
-	    background-image: url('../images/ruby_1920.jpg');
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    position: absolute;
-	    width: 100%;
-	    right: 8%;
-	    bottom: 0;
-	    height: 100%;
-		}
-		&::after {
-			display: block;
-			width: 100%;
-			clear: both;
-			content: '';
-		}
-	.container{
-		font-family: $HelveticaNeueCondensedBold;
-		color: #fff;
-		padding-top: 12vw;
-		&::after {
-			left: -999em;
-			background: #000;
-			content: '';
-			display: block;
-			position: absolute;
-			width: 100%;
-			clear: both;
-			top: 0;
-			bottom: 0;
-		}
-		#sabri {
-			font-family: $CFAstyStd-book-font;
-			padding: 0 20px;
-			p.title {
-				font-family: $HelveticaNeueCondensedBold;
-				font-size: 15px;
-				text-transform: uppercase;
-				color: $highlight-font;
-			}
-			h3 {
-				font-family: $HelveticaNeueCondensedBold;
-				font-size: 40px;
-				text-transform: uppercase;
-			}
-			
-		}
-		
-
-	}
-	.container#about-sari {
-			padding-top: 0;
-			.logos {
-				img {
-					display: inline-block;
-					padding: 15px 5px 5px;
-					vertical-align: top;
-				}
-			}
-		}	
+  position: relative;
+  min-height: 55vw;
+  &::before {
+    content: "";
+    background-image: url("../images/ruby_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    right: 8%;
+    bottom: 0;
+    height: 100%;
+  }
+  &::after {
+    display: block;
+    width: 100%;
+    clear: both;
+    content: "";
+  }
+  .container {
+    font-family: $HelveticaNeueCondensedBold;
+    color: #fff;
+    padding-top: 12vw;
+    &::after {
+      left: -999em;
+      background: #000;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      clear: both;
+      top: 0;
+      bottom: 0;
+    }
+    #sabri {
+      font-family: $CFAstyStd-book-font;
+      padding: 0 20px;
+      p.title {
+        font-family: $HelveticaNeueCondensedBold;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $highlight-font;
+      }
+      h3 {
+        font-family: $HelveticaNeueCondensedBold;
+        font-size: 40px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .container#about-sari {
+    padding-top: 0;
+    .logos {
+      img {
+        display: inline-block;
+        padding: 15px 5px 5px;
+        vertical-align: top;
+      }
+    }
+  }
 }
 #sec_3 {
-	margin-top: 10vw;
-	position: relative;
-	min-height: 60vw;
-	&::before {
-		content: '';
-	    background-image: url(../images/03-magazines-desktop.png);
-	    background-size: cover;
-	    background-position: right;
-	    background-repeat: no-repeat;
-	    position: absolute;
-	    width: 59vw;
-	    right: 6%;
-	    bottom: 0;
-	    min-height: 37vw;
-	    top: -12%;
-	    left: -11%;
-	}
-	.about-wrap {
-		background: #f7f3f5;
-		.container {
-			
-			padding: 70px 50px;
-			#foundr {
-				p {
-					font-family: $CFAstyStd-book-font;
-				}
-				p.title {
-						font-family: $HelveticaNeueCondensedBold;
-						font-size: 15px;
-						text-transform: uppercase;
-						color: $highlight-font;
-				}
-				h3 {
-					padding: 20px 0 50px;
-					img {
-						width: 65%;
-					}
-				}
-			}
-		}
-	}
+  margin-top: 10vw;
+  position: relative;
+  min-height: 60vw;
+  &::before {
+    content: "";
+    background-image: url(../images/03-magazines-desktop.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 59vw;
+    right: 6%;
+    bottom: 0;
+    min-height: 37vw;
+    top: -12%;
+    left: -11%;
+  }
+  .about-wrap {
+    background: #f7f3f5;
+    .container {
+      padding: 70px 50px;
+      #foundr {
+        p {
+          font-family: $CFAstyStd-book-font;
+        }
+        p.title {
+          font-family: $HelveticaNeueCondensedBold;
+          font-size: 15px;
+          text-transform: uppercase;
+          color: $highlight-font;
+        }
+        h3 {
+          padding: 20px 0 50px;
+          img {
+            width: 65%;
+          }
+        }
+      }
+    }
+  }
 }
 #sec_4 {
-	.container {
-		padding-right: 70px;
-		padding-left: 70px;
-	}
-	h2 {
-		font-family: $HelveticaNeueCondensedBold;
-		font-size: 40px;
-		text-align: center;
-		text-transform: uppercase;
-		margin-bottom: 40px;
-		margin-top: 40px;
-		span {
-			display: block;
-		}
-	}
-	.featured-story {
-		background: #fff;
-		padding: 20px;
-		.thumbnail-vid {
-			position: relative;
-			&::before {
-				content: "\f04b";
-			    font-family: "FontAwesome", sans-serif;
-			    position: absolute;
-			    color: #2cecb4;
-			    font-size: 30px;
-			    z-index: 100;
-			    cursor: pointer;
-			    left: 50%;
-			    margin-left: -7px;
-			    top: 50%;
-			    margin-top: -21px;
-			}
-			&::after {
-				content: "";
-			    position: absolute;
-			    top: 50%;
-			    left: 50%;
-			    width: 60px;
-			    height: 60px;
-			    margin-left: -30px;
-			    margin-top: -30px;
-			    border-radius: 50%;
-			    background-color: rgba(255, 255, 255, 0.85);
-			    cursor: pointer;
-			}
-			&:hover {
-				cursor: pointer;
-				&:after {
-					background-color: rgba(255, 255, 255, 1);
-				}
-			}
-		}
-		#second, #third {
-			margin-top: 70px;
-		}
-		
-		min-height: 100%;
-		p {
-			font-family: $CFAstyStd-book-font;
-			margin: 0;
-		}
-		p.title, p.author {
-			font-family: $HelveticaNeueCondensedBold;
-			font-size: 22px;
-		}
-		p.author {
-			padding-top: 20px;
-			color: $highlight-font;
-		}
-		p.title {
-			padding-bottom: 20px;
-			color: $highlight-font;
-			color: #1d1e31;
-		}
-		.link-story {
-			font-family: $Miller-Display-Regular;
-			margin: 50px 0 20px;
-			p {
-				font-family: $Miller-Display-Regular;
-			}
-			p.watch {
-				color: $highlight-font;
-			}
-		}
-	}
-	img {
-		margin: 0 auto;
-		display: block;
-	}
+  .container {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+  h2 {
+    font-family: $HelveticaNeueCondensedBold;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    span {
+      display: block;
+    }
+  }
+  .featured-story {
+    background: #fff;
+    padding: 20px;
+    .thumbnail-vid {
+      position: relative;
+      &::before {
+        content: "\f04b";
+        font-family: "FontAwesome", sans-serif;
+        position: absolute;
+        color: #2cecb4;
+        font-size: 30px;
+        z-index: 100;
+        cursor: pointer;
+        left: 50%;
+        margin-left: -7px;
+        top: 50%;
+        margin-top: -21px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: -30px;
+        margin-top: -30px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.85);
+        cursor: pointer;
+      }
+      &:hover {
+        cursor: pointer;
+        &:after {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    #second,
+    #third {
+      margin-top: 70px;
+    }
+
+    min-height: 100%;
+    p {
+      font-family: $CFAstyStd-book-font;
+      margin: 0;
+    }
+    p.title,
+    p.author {
+      font-family: $HelveticaNeueCondensedBold;
+      font-size: 22px;
+    }
+    p.author {
+      padding-top: 20px;
+      color: $highlight-font;
+    }
+    p.title {
+      padding-bottom: 20px;
+      color: $highlight-font;
+      color: #1d1e31;
+    }
+    .link-story {
+      font-family: $Miller-Display-Regular;
+      margin: 50px 0 20px;
+      p {
+        font-family: $Miller-Display-Regular;
+      }
+      p.watch {
+        color: $highlight-font;
+      }
+    }
+  }
+  img {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 #sec_5 {
-	margin: 100px 0;
-	position: relative;
-	margin-bottom: 50px;
-	.container{
-		min-height: 60vw;
-	}
-	.hero-wrap {
-		&::before {
-		position: absolute;
-	    content: "";
-	    width: 90%;
-	    margin-left: 5%;
-	    margin-right: 5%;
-	    display: block;
-	    top: 0;
-	    bottom: 0;
-	    right: 0;
-	    height: 100%;
-	    left: 0;
-	    background-image:url('../images/cta.png');
-		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: center top;
-		}
-		.hero-text {
-			color: #fff;
-			text-align: center;
-			margin: 8vw 0 2vw;
-			span {
-				color: $highlight-font;
-			}
-			h1 {
-				font-family: $HelveticaNeueCondensedBold;
-				font-size: 60px;
-				text-align: center;
-				text-transform: uppercase;
-				padding: 30px 0 8px;
-			}
-			p {
-				font-family: $Miller-Display-Regular;
-				font-size: 17px;
-				text-align: center;
-				span {
-					color: $highlight-font;
-				}
-			}
-		}
-		form {
-			@include form-style;
-			width: 420px;
-			margin: 0 auto;
-			input {
-				margin: 0;
-			}
-			button {
-				width: initial;
-				display: block;
-				margin: 20px auto;
-				text-transform: capitalize;
-				padding-right: 40px;
-    			padding-left: 40px
-			}
-		}
-	}
+  margin: 100px 0;
+  position: relative;
+  margin-bottom: 50px;
+  .container {
+    min-height: 60vw;
+  }
+  .hero-wrap {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      display: block;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      left: 0;
+      background-image: url("../images/cta.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center top;
+    }
+    .hero-text {
+      color: #fff;
+      text-align: center;
+      margin: 8vw 0 2vw;
+      span {
+        color: $highlight-font;
+      }
+      h1 {
+        font-family: $HelveticaNeueCondensedBold;
+        font-size: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 30px 0 8px;
+      }
+      p {
+        font-family: $Miller-Display-Regular;
+        font-size: 17px;
+        text-align: center;
+        span {
+          color: $highlight-font;
+        }
+      }
+    }
+    form {
+      @include form-style;
+      width: 420px;
+      margin: 0 auto;
+      input {
+        margin: 0;
+      }
+      button {
+        width: initial;
+        display: block;
+        margin: 20px auto;
+        text-transform: capitalize;
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+    }
+  }
 }
 
 #sec_6 {
-	background: #f7f3f5;
-	margin: 0;
-	padding: 80px 0;
+  background: #f7f3f5;
+  margin: 0;
+  padding: 80px 0;
 
-	h4 {
-		font-family: $Miller-Display-Regular;
-		font-size: 20px;
-		color: #1d1e31;
-		text-align: center;
-		width: 100%;
-
-	}
-	.slider {
-		margin-top: 50px;
-	}
-
+  h4 {
+    font-family: $Miller-Display-Regular;
+    font-size: 20px;
+    color: #1d1e31;
+    text-align: center;
+    width: 100%;
+  }
+  .slider {
+    margin-top: 50px;
+  }
 }
 footer {
-	background: #efebed;
-	color: #1d1e31;
-	font-family: $CFAstyStd-book-font;
-	.brand {
-		font-family: $CFAstyStd-bold-font;
-		display: block;
-		width: 180px;
-		margin: 0 auto;
-		text-align: center;
-		font-size: 30px;
-		padding: 50px;
-		text-decoration: none;
-		color: #fff;
-		span {
-			color: $highlight-font;
-		}
-	}
-	.disclaimer strong {
-		text-transform: uppercase;
-		font-weight: bolder;
-		font-family: $CFAstyStd-bold-font;
-	}
-	.copyright {
-		text-align: center;
-		margin: 40px 0;
-		width: 100%;
-		strong {
-			font-weight: bolder;
-			font-family: $CFAstyStd-bold-font;
-		}
-		.dots-disclaimer {
-			padding: 0 5px;
-		}
-	}
+  background: #efebed;
+  color: #1d1e31;
+  font-family: $CFAstyStd-book-font;
+  .brand {
+    font-family: $CFAstyStd-bold-font;
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    padding: 50px;
+    text-decoration: none;
+    color: #fff;
+    span {
+      color: $highlight-font;
+    }
+  }
+  .disclaimer strong {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: $CFAstyStd-bold-font;
+  }
+  .copyright {
+    text-align: center;
+    margin: 40px 0;
+    width: 100%;
+    strong {
+      font-weight: bolder;
+      font-family: $CFAstyStd-bold-font;
+    }
+    .dots-disclaimer {
+      padding: 0 5px;
+    }
+  }
 }
 
 /* tablets and medium devices */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-	header {
-		background-position: 65% center; 
-		.header-highlight {
-			display: block;
-		}
-		#header-form {
-			width: 80%;
-			margin: 0 auto;
-			input, button {
-				margin: 20px 0;
-			}
-			button {
-				width: 45%;
-				margin: 0 auto;
-				display: block;
-			}
-		}
-	p.detail {
-			margin-bottom: 30px;
-		}	
-	}
-	#sec_1 {
-		margin-top: 50px;
-		margin-bottom: 50px;
-		.p_span, h2 {
-			font-family: $HelveticaNeueCondensedBold;
-			text-transform: uppercase;
-    		font-size: 15px;
-    		text-align: center;
-		}
-		h2 {
-			font-size: 40px;
-			padding-bottom: 30px;
-			span {
-				display: block;
-			}
-		}
-		.video-series {
-			padding: 0 50px;
-			#lessons-content {
-				margin-top: 50px;
-			}
-		}
-	}
-	#sec_2 {
-		&::before {
-	    background-image: url('../images/ruby_1920-tablet.jpg');
-	    right: 0;
-		}
-		#sabri {
-			width: 60%;
-		    margin-top: 70px;
-		}
-		.logos {
-			padding: 50px 0;
-		}
-	}
-	#sec_3 {
-		margin-top: 0;
-		padding: 45vw 0;
-		&::before {
-			background-image: url('../images/03-magazines-tablet.png');
-			width: 100%;
-			height: 100%;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			top: 2%;
-		}
-		.about-wrap {
-			background: #efebed;
-			/*margin: 20vw 0;*/
-		}
-		#foundr {
-			p, h3 {
-				text-align: center;
-			}
-			background: #f7f3f5;
-			margin: 50px;
-    		padding: 50px;
-		}
-	}
-	#sec_4 {
-		.container {
-			padding: 0;
-			#third {
-				margin-top: 50px;
-			}
-		}
-	}
-	#sec_5 {
-		.hero-wrap {
-			&::before {
-				background-image: url('../images/cta-tablet.png');
-				background-size: cover;
-				width: 100%;
-				margin: 0;
-			}
-			.container {
-				min-height: 70vw;
-			}
-		}
-	}
+  header {
+    background-position: 65% center;
+    .header-highlight {
+      display: block;
+    }
+    #header-form {
+      width: 80%;
+      margin: 0 auto;
+      input,
+      button {
+        margin: 20px 0;
+      }
+      button {
+        width: 45%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    p.detail {
+      margin-bottom: 30px;
+    }
+  }
+  #sec_1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .p_span,
+    h2 {
+      font-family: $HelveticaNeueCondensedBold;
+      text-transform: uppercase;
+      font-size: 15px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 40px;
+      padding-bottom: 30px;
+      span {
+        display: block;
+      }
+    }
+    .video-series {
+      padding: 0 50px;
+      #lessons-content {
+        margin-top: 50px;
+      }
+    }
+  }
+  #sec_2 {
+    &::before {
+      background-image: url("../images/ruby_1920-tablet.jpg");
+      right: 0;
+    }
+    #sabri {
+      width: 60%;
+      margin-top: 70px;
+    }
+    .logos {
+      padding: 50px 0;
+    }
+  }
+  #sec_3 {
+    margin-top: 0;
+    padding: 45vw 0;
+    &::before {
+      background-image: url("../images/03-magazines-tablet.png");
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 2%;
+    }
+    .about-wrap {
+      background: #efebed;
+      /*margin: 20vw 0;*/
+    }
+    #foundr {
+      p,
+      h3 {
+        text-align: center;
+      }
+      background: #f7f3f5;
+      margin: 50px;
+      padding: 50px;
+    }
+  }
+  #sec_4 {
+    .container {
+      padding: 0;
+      #third {
+        margin-top: 50px;
+      }
+    }
+  }
+  #sec_5 {
+    .hero-wrap {
+      &::before {
+        background-image: url("../images/cta-tablet.png");
+        background-size: cover;
+        width: 100%;
+        margin: 0;
+      }
+      .container {
+        min-height: 70vw;
+      }
+    }
+  }
 }
 /* Small devices */
 @media screen and (max-width: 767px) {
-	header {
-	background-image: url('../images/hero-foto-mobile.jpg');
-	background-position: center bottom;
-	padding: 20px;
-		.hero-text h1 {
-			font-size: 32px;
-		}
-		input, button {
-			margin: 10px 0 !important;
-		}
-		p.detail {
-			margin-top: 20px;
-		}
-		p br {
-			display: none;
-		}
-	}
-	#sec_1 {
-		margin-top: 50px;
-		margin-bottom: 50px;
-		.p_span, h2 {
-			font-family: $HelveticaNeueCondensedBold;
-			text-transform: uppercase;
-			font-size: 15px;
-			text-align: center;
-		}
-		h2 {
-			font-size: 32px;
-			padding-bottom: 30px;
-			span {
-				display: inline;
-			}
-		}
-		.video1 .video-title {
-			right: 5%;
-			left: auto;
-		}
-		.video-series {
-			padding: 0;
-		}
-		#lessons-content {
-			.lessons {
-				padding: 40px !important;
-			}
-		}
-		#lessons-content .col-sm-6 {
-			position: relative;
-			&:first-child {
-				border: none;
-				&::after {
-					content: '';
-					height: 2px;
-				    width: 50%;
-				    margin: 0 20%;
-				    bottom: 0;
-				    position: absolute;
-				    background: #fff;
-				}
-			}
-		}
-	}
+  header {
+    background-image: url("../images/hero-foto-mobile.jpg");
+    background-position: center bottom;
+    padding: 20px;
+    .hero-text h1 {
+      font-size: 32px;
+    }
+    input,
+    button {
+      margin: 10px 0 !important;
+    }
+    p.detail {
+      margin-top: 20px;
+    }
+    p br {
+      display: none;
+    }
+  }
+  #sec_1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .p_span,
+    h2 {
+      font-family: $HelveticaNeueCondensedBold;
+      text-transform: uppercase;
+      font-size: 15px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 32px;
+      padding-bottom: 30px;
+      span {
+        display: inline;
+      }
+    }
+    .video1 .video-title {
+      right: 5%;
+      left: auto;
+    }
+    .video-series {
+      padding: 0;
+    }
+    #lessons-content {
+      .lessons {
+        padding: 40px !important;
+      }
+    }
+    #lessons-content .col-sm-6 {
+      position: relative;
+      &:first-child {
+        border: none;
+        &::after {
+          content: "";
+          height: 2px;
+          width: 50%;
+          margin: 0 20%;
+          bottom: 0;
+          position: absolute;
+          background: #fff;
+        }
+      }
+    }
+  }
 
-	#sec_2 {
-		
-		background-size: cover;
-		&::before {
-			background: none;
-			right: 0;
-			background: none;
-		    background-image: url('../images/ruby_1920-mobile.jpg');
-		    background-size: cover;
-	    	background-position: top;
-		    right: 0;
-		}
-		&::after {
-			/*background-repeat: no-repeat;
+  #sec_2 {
+    background-size: cover;
+    &::before {
+      background: none;
+      right: 0;
+      background: none;
+      background-image: url("../images/ruby_1920-mobile.jpg");
+      background-size: cover;
+      background-position: top;
+      right: 0;
+    }
+    &::after {
+      /*background-repeat: no-repeat;
 			height: 900px;
 			position: relative;
 			background-image: url('../images/04-sabri-foto-mobile.png');
 			background-size: cover;
 			position: relative;
 			height: 500px;*/
-		}
-		#about-sari-wrap {
-			/*background-image: url('../images/04-sabri-foto-mobile.png');*/
-		    background-size: cover;
-		    min-height: 270vw;
-		    position: relative;
-		    .col-sm-12 {
-		    	min-height: 270vw;
-		    }
-		}
-		#sabri {
-			width: 100%;
-		    margin-top: 70px;
-		    min-height: 70vw;
-		    padding: 0!important;
+    }
+    #about-sari-wrap {
+      /*background-image: url('../images/04-sabri-foto-mobile.png');*/
+      background-size: cover;
+      min-height: 270vw;
+      position: relative;
+      .col-sm-12 {
+        min-height: 270vw;
+      }
+    }
+    #sabri {
+      width: 100%;
+      margin-top: 70px;
+      min-height: 70vw;
+      padding: 0 !important;
+    }
+    #about-sari {
+      position: relative;
+    }
+    .logos {
+      position: absolute;
+      bottom: 50px;
+    }
+    .container {
+      padding-top: 20vw;
+    }
+  }
+  #sec_3 {
+    &::before {
+      content: "";
+      background-image: url(../images/03-magazines-desktop.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 100%;
+      /* right: 6%; */
+      bottom: 0;
+      min-height: 37vw;
+      top: 0;
+      left: -1%;
+    }
+    .about-wrap {
+      background: #efebed;
+      .col-sm-12 {
+        background: #f7f3f5;
+        p.title {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+  #sec_4 {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    .col-sm-4 {
+      margin: 20px 0;
+    }
+  }
 
+  #sec_5 {
+    h1 {
+      font-size: 32px !important;
+    }
+    br {
+      display: none;
+    }
 
-		}
-		#about-sari {
-			position: relative;
-		}
-		.logos {
-			position: absolute;
-			bottom: 50px;
-		}
-		.container {
-			padding-top: 20vw;
-		}
-	}
-	#sec_3 {
-		&::before {
-			content: "";
-		    background-image: url(../images/03-magazines-desktop.png);
-		    background-size: cover;
-		    background-position: center center;
-		    background-repeat: no-repeat;
-		    position: absolute;
-		    width: 100%;
-		    /* right: 6%; */
-		    bottom: 0;
-		    min-height: 37vw;
-		    top: 0;
-		    left: -1%;
-		}
-		.about-wrap {
-			background: #efebed;
-			.col-sm-12 {
-				background: #f7f3f5;
-				p.title {
-					text-align: center;
-					margin-top: 1rem;
-				}
-				h3 {
-					text-align: center;
-				}
-			}
-		}
-	}
-	#sec_4 {
-		.container {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-		h2 {
-			font-size: 32px;
-		}
-		.col-sm-4 {
-			margin: 20px 0;
-		}
-	}
-
-	#sec_5 {
-		h1 {
-			font-size: 32px !important;
-		}
-		br {
-			display: none;
-		}
-
-		.hero-wrap {
-			&::before {
-				background-size: cover;
-				width: 100%;
-				margin: 0;
-			}
-			padding: 50px;
-		}
-		.hero-wrap form {
-			width: 100%;
-			margin: 40px 0;
-			input, button {
-				margin: 10px 0!important;
-			}
-			button {
-				width: 100%;
-				text-align: center;
-			}
-		}
-	}
-	#sec_6 {
-		padding: 50px 0;
-		h4 {
-			padding: 0 30px 30px;
-		}
-		.slider {
-			margin: 0;
-		}
-	}
-	.copyright {
-		span {
-			display: block;
-		}
-		.dots-disclaimer {
-			display: none;
-		}
-	}
+    .hero-wrap {
+      &::before {
+        background-size: cover;
+        width: 100%;
+        margin: 0;
+      }
+      padding: 50px;
+    }
+    .hero-wrap form {
+      width: 100%;
+      margin: 40px 0;
+      input,
+      button {
+        margin: 10px 0 !important;
+      }
+      button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  #sec_6 {
+    padding: 50px 0;
+    h4 {
+      padding: 0 30px 30px;
+    }
+    .slider {
+      margin: 0;
+    }
+  }
+  .copyright {
+    span {
+      display: block;
+    }
+    .dots-disclaimer {
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 575px) and (max-width: 767px) {
-	#lessons-content .col-sm-6 {
-		position: relative;
-		&:first-child {
-			border: none;
-			&::after {
-				display: none !important;
-			}
-		}
-	}
+  #lessons-content .col-sm-6 {
+    position: relative;
+    &:first-child {
+      border: none;
+      &::after {
+        display: none !important;
+      }
+    }
+  }
 }
