@@ -204,8 +204,6 @@ header {
     img {
       border-bottom: 10px solid $highlight-font;
     }
-    span {
-    }
   }
   #lessons-content .col-sm-6 {
     &:first-child {
@@ -765,15 +763,6 @@ footer {
       background-size: cover;
       background-position: top;
       right: 0;
-    }
-    &::after {
-      /*background-repeat: no-repeat;
-			height: 900px;
-			position: relative;
-			background-image: url('../images/04-sabri-foto-mobile.png');
-			background-size: cover;
-			position: relative;
-			height: 500px;*/
     }
     #about-sari-wrap {
       /*background-image: url('../images/04-sabri-foto-mobile.png');*/
